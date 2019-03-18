@@ -1,17 +1,14 @@
+<a routerLink="/manage-list" *ngIf="userDescription == 'Manager'" class="manage-list">Back to Manage list</a>
+
 <div>
-
-  <img #previewImage>
-
-  <ul *ngFor="let car of cars">
+ 
+  <ul *ngFor="let car of cars" class="w3-ul w3-card-4 w3-hoverable w3-center">
          
-      <li>
-          <app-thumbnail id="tumbImage" imageName="/assets/Carsimages/{{car.typeid}}.jpg" width="70" height="70"
-         routerLink="/car-details/{{car.typeid}}"></app-thumbnail>
-      
-          <h2>
-            {{car.manufacture}} {{car.model}}</h2>
-            <h2>Year: {{car.year}} Address: {{car.address}}
-              </h2>
+      <li class="w3-bar">
+          <img class="w3-bar-item w3-circle w3-hide-small" id="tumbImage" src="/assets/Carsimages/{{car.typeid}}.jpg" width="100%" routerLink="/car-details/{{car.id}}">
+            <h3 class="w3-bar-item">
+            {{car.manufacture}} {{car.model}} {{car.year}}</h3>
+          
         </li>
 
     </ul>

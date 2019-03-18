@@ -11,12 +11,17 @@ import { Router } from '@angular/router';
 export class ManageListComponent {
   
   public car  = new Cars();
+  public addcar: boolean = false;
 
   public constructor(private carservice: CarsService, private router: Router) { }
 
   public addCar(): void {
     this.carservice.AddCar(this.car);
     this.router.navigate(["/cars"]);
+  }
+
+  public ShowAddCarForm(): void {
+      this.addcar = true;
   }
 
 }

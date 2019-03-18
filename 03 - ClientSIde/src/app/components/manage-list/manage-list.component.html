@@ -1,5 +1,17 @@
-<h2>Add Car</h2>>
-<form #formInfo="ngForm">
+  <div class="sidenav">
+    <a routerLink="/add-car">Add a Car</a>
+    <a routerLink="/cars">Show all Cars</a>
+    <a href="#">Update Car details</a>
+  </div>
+  
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+
+<!-- <button type="button" (click)="ShowAddCarForm()" *ngIf="!addcar">Add Car</button> -->
+
+
+<!-- <form #formInfo="ngForm" *ngIf="addcar">
 
     <input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required placeholder="Car's type">
     <span *ngIf="carTypeinfo.errors?.required && carTypeinfo.touched">Type is a must</span>
@@ -36,4 +48,4 @@
     
     <button [disabled]="formInfo.form.invalid" (click)="((addCar()))">Add Car</button>
     
-    </form>
+    </form> -->

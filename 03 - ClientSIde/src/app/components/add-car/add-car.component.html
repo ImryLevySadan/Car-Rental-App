@@ -1,3 +1,7 @@
+<a routerLink="/manage-list" class="back">
+  Back to car list section
+</a>
+
 <form #formInfo="ngForm">
 
 <input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required placeholder="Car's type">

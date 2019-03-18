@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarAndHomeModelStoreContainer" CdmEntityContainer="CarAndHomeEntities">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="CarAndHomeModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_Lists">
+      <EntityTypeMapping TypeName="CarAndHomeModel.Cars_List">
+        <MappingFragment StoreEntitySet="Cars List">
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="Type_ID" ColumnName="Type ID" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars_Types">
+      <EntityTypeMapping TypeName="CarAndHomeModel.Cars_Type">
+        <MappingFragment StoreEntitySet="Cars Types">
+          <ScalarProperty Name="Type_ID" ColumnName="Type ID" />
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Daily_Cost" ColumnName="Daily Cost" />
+          <ScalarProperty Name="Daily_Delay_Cost" ColumnName="Daily Delay Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rented_Cars">
+      <EntityTypeMapping TypeName="CarAndHomeModel.Rented_Car">
+        <MappingFragment StoreEntitySet="Rented Cars">
+          <ScalarProperty Name="Rent_ID" ColumnName="Rent ID" />
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Actual_Return" ColumnName="Actual Return" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CarAndHomeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CarAndHomeModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllAutoCars">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllAutoCar">
+        <MappingFragment StoreEntitySet="AllAutoCars">
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Daily_Cost" ColumnName="Daily Cost" />
+          <ScalarProperty Name="Daily_Delay_Cost" ColumnName="Daily Delay Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllCarRenteds">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllCarRented">
+        <MappingFragment StoreEntitySet="AllCarRented">
+          <ScalarProperty Name="Rent_ID" ColumnName="Rent ID" />
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Actual_Return" ColumnName="Actual Return" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllCarTypes">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllCarType">
+        <MappingFragment StoreEntitySet="AllCarTypes">
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Daily_Cost" ColumnName="Daily Cost" />
+          <ScalarProperty Name="Daily_Delay_Cost" ColumnName="Daily Delay Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllClients">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllClient">
+        <MappingFragment StoreEntitySet="AllClients">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllEmployees">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllEmployee">
+        <MappingFragment StoreEntitySet="AllEmployees">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllManualCars">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllManualCar">
+        <MappingFragment StoreEntitySet="AllManualCars">
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Daily_Cost" ColumnName="Daily Cost" />
+          <ScalarProperty Name="Daily_Delay_Cost" ColumnName="Daily Delay Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllUsers">
+      <EntityTypeMapping TypeName="CarAndHomeModel.AllUser">
+        <MappingFragment StoreEntitySet="AllUsers">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotReturnedCars">
+      <EntityTypeMapping TypeName="CarAndHomeModel.NotReturnedCar">
+        <MappingFragment StoreEntitySet="NotReturnedCars">
+          <ScalarProperty Name="Rent_ID" ColumnName="Rent ID" />
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Actual_Return" ColumnName="Actual Return" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddBranch" FunctionName="CarAndHomeModel.Store.AddBranch" />
+    <FunctionImportMapping FunctionImportName="AddCarRent" FunctionName="CarAndHomeModel.Store.AddCarRent" />
+    <FunctionImportMapping FunctionImportName="AddCarToCarList" FunctionName="CarAndHomeModel.Store.AddCarToCarList" />
+    <FunctionImportMapping FunctionImportName="AddCarType" FunctionName="CarAndHomeModel.Store.AddCarType" />
+    <FunctionImportMapping FunctionImportName="AddUser" FunctionName="CarAndHomeModel.Store.AddUser" />
+    <FunctionImportMapping FunctionImportName="AllCarDetails" FunctionName="CarAndHomeModel.Store.AllCarDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.AllCarDetails_Result">
+          <ScalarProperty Name="Type_ID" ColumnName="Type ID" />
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Daily_Cost" ColumnName="Daily Cost" />
+          <ScalarProperty Name="Daily_Delay_Cost" ColumnName="Daily Delay Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="Type_ID1" ColumnName="Type ID1" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch ID" />
+          <ScalarProperty Name="Branch_ID1" ColumnName="Branch ID1" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CheckAvailabiltyById" FunctionName="CarAndHomeModel.Store.CheckAvailabiltyById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.CheckAvailabiltyById_Result">
+          <ScalarProperty Name="Rent_ID" ColumnName="Rent ID" />
+          <ScalarProperty Name="Car_ID" ColumnName="Car ID" />
+          <ScalarProperty Name="License_Plate" ColumnName="License Plate" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Actual_Return" ColumnName="Actual Return" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Car_ID1" ColumnName="Car ID1" />
+          <ScalarProperty Name="Type_ID" ColumnName="Type ID" />
+          <ScalarProperty Name="License_Plate1" ColumnName="License Plate1" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCarFromCarsList" FunctionName="CarAndHomeModel.Store.DeleteCarFromCarsList" />
+    <FunctionImportMapping FunctionImportName="DeleteClient" FunctionName="CarAndHomeModel.Store.DeleteClient" />
+    <FunctionImportMapping FunctionImportName="DeleteEmployee" FunctionName="CarAndHomeModel.Store.DeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="DeleteRentedCar" FunctionName="CarAndHomeModel.Store.DeleteRentedCar" />
+    <FunctionImportMapping FunctionImportName="DeleteType" FunctionName="CarAndHomeModel.Store.DeleteType" />
+    <FunctionImportMapping FunctionImportName="GetClientById" FunctionName="CarAndHomeModel.Store.GetClientById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.GetClientById_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetEmployeeById" FunctionName="CarAndHomeModel.Store.GetEmployeeById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.GetEmployeeById_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User Name" />
+          <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+          <ScalarProperty Name="Birth_Date" ColumnName="Birth Date" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="CarAndHomeModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="CarAndHomeModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="CarAndHomeModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="CarAndHomeModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="CarAndHomeModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CarAndHomeModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="CarAndHomeModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="CarAndHomeModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UpdateActualRerturnDateCar" FunctionName="CarAndHomeModel.Store.UpdateActualRerturnDateCar" />
+    <FunctionImportMapping FunctionImportName="UpdateCarsList" FunctionName="CarAndHomeModel.Store.UpdateCarsList" />
+    <FunctionImportMapping FunctionImportName="UpdateCarType" FunctionName="CarAndHomeModel.Store.UpdateCarType" />
+    <FunctionImportMapping FunctionImportName="UpdateClientDetails" FunctionName="CarAndHomeModel.Store.UpdateClientDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateEmployeeDetails" FunctionName="CarAndHomeModel.Store.UpdateEmployeeDetails" />
+  </EntityContainerMapping>
+</Mapping>

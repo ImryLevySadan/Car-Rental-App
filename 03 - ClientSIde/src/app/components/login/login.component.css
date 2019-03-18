@@ -1,0 +1,42 @@
+input, button {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+
+
+}
+
+span {
+    color: red;
+    margin: 10px;
+    position: absolute;
+    font-size: large;
+    font-family: cursive;
+}
+
+h3{
+    color: black;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(228, 139, 24);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:hover {background-color: #ecba15}
+  
+  button:active {
+    background-color: #f56613;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

@@ -1,0 +1,19 @@
+table{
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-family: cursive;
+    color: black;
+    font-size: large;
+}
+div {
+    height: 400px;
+    overflow: auto;
+}
+img {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}

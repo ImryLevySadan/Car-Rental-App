@@ -1,0 +1,29 @@
+<div>
+
+  <img #previewImage>
+<table>
+  <tr>
+    <th>Manufacture</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Address</th>
+    <th>Look</th>
+  </tr>
+  <tr *ngFor="let car of cars">
+      <td>
+        <a routerLink="/car-details/{{car.typeid}}">
+       {{car.manufacture}}</a>
+
+      </td>
+      <td>{{car.model}}</td>
+      <td>{{car.year}}</td>
+      <td>{{car.address}}</td>
+      <td>
+        <app-thumbnail imageName="/assets/Carsimages/{{car.typeid}}.jpg" width="70" height="70"
+        (mouseEnter)="previewImage.src = $event" (mouseLeave)="previewImage.src=''"></app-thumbnail>
+      </td>
+
+  </tr>
+</table>
+
+</div>

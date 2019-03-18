@@ -1,0 +1,50 @@
+<div class="container-fluid text-center">
+        <h2>Enter Car details:</h2>
+        <br>
+        <br>
+
+<label> Enter License Plate number:
+    <input #CarLicenseplateInfo="ngModel" pattern=^[0-9]*$ minlength="7" maxlength="7" type="text" name="LicensePlate" [(ngModel)]="RentalDetails.licenseplate" required placeholder="5857473">
+    <span *ngIf="CarLicenseplateInfo.errors?.required && CarLicenseplateInfo.touched">License plate is a must</span>
+    <span *ngIf="CarLicenseplateInfo.errors?.minlength ||  CarLicenseplateInfo.errors?.maxlength && CarLicenseplateInfo.touched">License plate must be 7 chars</span>
+    <span *ngIf="CarLicenseplateInfo.errors?.pattern && CarLicenseplateInfo.touched">License plate must be number</span>
+    
+</label>
+<label>Enter Client id number:
+<input #idnumberinfo="ngModel" type="text" name="idnumber" maxlength="9" minlength="8" pattern="^[0-9]{1,40}$" [(ngModel)]="RentalDetails.idnumber" required placeholder="012345678">
+<span *ngIf="idnumberinfo.touched && idnumberinfo.invalid">Must enter an Id Number, between 8-9 digits</span>
+<br>
+<span *ngIf="idnumberinfo.errors?.pattern && idnumberinfo.invalid">Id number can only include numbers</span>
+</label>
+</div>
+<button type="button" (click)="SearchRentedCar()">Search Car</button>
+<br>
+<br>
+        <div id="carDetails" *ngIf="RentedCar">
+            <h4>Client full name: {{RentedCar.fullname}}</h4>
+            <br>
+            <h4>Rental start date: {{RentedCar.start}}</h4>
+            <br>
+            <h4>Rental return date: {{RentedCar.returndate}}</h4>
+            <br>
+            <h4>Daily Cost: {{RentedCar.dailycost}}$</h4>
+            <br>
+            <h4>Daily Delay Cost: {{RentedCar.dailydelaycost}}</h4>
+            <br>
+            <button type="button" (click)="CalculateRentalCost()">Calculate Rental Cost</button>
+            <br>
+            <br>
+        </div>
+   
+
+        <div *ngIf="carRentalCost">
+              <h4>Cost of rental in range: {{carRentalCost}}</h4>
+              <h4 *ngIf="CarRentalDelayCost">Cost of delay: {{CarRentalDelayCost}}</h4>
+              <br>
+              <h2>The total rental Cost is: {{TotalRentalCost}}</h2>
+             <br>
+             <br>
+             <button type="button" (click)="updateActualReturnDate()">Car returned</button>
+
+        </div>
+

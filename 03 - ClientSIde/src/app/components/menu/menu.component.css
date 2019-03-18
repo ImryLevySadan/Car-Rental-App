@@ -1,0 +1,31 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: #53a1fa;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: black !important;
+    background-color: #fff !important;
+  }
+
+a {
+    font-size: large;
+    color: black;
+
+}
+
+.nav-link > #hello {
+    position: absolute;
+    right: 100px; 
+    color: white; 
+}
+#nav-link > #logout {
+    position: absolute;
+    right: 75px;  
+}

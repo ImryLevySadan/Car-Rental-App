@@ -1,0 +1,57 @@
+<form #formInfo="ngForm">
+
+  <input #fullNameinfo="ngModel" type="text" name="fullname" pattern="^[a-zA-Z''-'\s]{1,40}$" [(ngModel)]="user.fullname" required placeholder="Bibi Netanyahu">
+  <span *ngIf="fullNameinfo.touched && fullNameinfo.invalid">Must enter a full name</span>
+  <span *ngIf="fullNameinfo.errors?.pattern && fullNameinfo.invalid">Name can only include "abc" char</span>
+
+  <br>
+
+  <input #userNameinfo="ngModel" type="text" name="username" [(ngModel)]="user.username" required placeholder="Bibi The King666!">
+  <span *ngIf="userNameinfo.touched && userNameinfo.invalid">Must enter a User name</span>
+
+  <br>
+
+  <input #idnumberinfo="ngModel" type="text" name="idnumber" maxlength="9" minlength="8" pattern="^[0-9]{1,40}$" [(ngModel)]="user.idnumber" required placeholder="012345678">
+  <span *ngIf="idnumberinfo.touched && idnumberinfo.invalid">Must enter an Id Number, between 8-9 digits</span>
+  <br>
+  <span *ngIf="idnumberinfo.errors?.pattern && idnumberinfo.invalid">Id number can only include numbers</span>
+
+  <i class="fas fa-envelope prefix grey-text"></i>
+  <input #emailinfo="ngModel" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="user.email" required placeholder="Ani@veafsi.od">
+  <span *ngIf="emailinfo.touched && emailinfo.invalid">Must enter an Email address</span>
+  <br>
+  <span *ngIf="emailinfo.errors?.pattern && emailinfo.invalid">Email must be in AAAAA@BBB.CCC format</span>
+
+  <input #passwordInfo="ngModel" type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$" [(ngModel)]="user.password" required placeholder="***********">
+  <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Must Enter a password</span>
+  <span *ngIf="passwordInfo.errors?.pattern && passwordInfo.invalid">The password must include at least one number, one lowercase char and one UPPERcase char</span>
+
+  <br>
+
+  <input #birthDateinfo="ngModel" type="date" value="2019-01-01" name="birthdate" [(ngModel)]="user.birthdate" required >
+  <br>
+
+    <select #genderInfo="ngModel" [(ngModel)]="user.gender" required name="gender">
+    <option [ngValue]="undefined" selected>Man? Woman?</option>
+    <option value="Male">Woman and a Proud one!</option>
+    <option value="Female">Man, no one is perfect</option>
+    <option value="No Gender">Don't tell me who I am</option>
+
+  </select>
+  <span *ngIf="genderInfo.errors?.required && genderInfo.touched && genderInfo.invalid">We want to know who you are...</span>
+
+  <br>
+
+  <select #DescriptionInfo="ngModel" [(ngModel)]="user.description" required name="description">
+    <option [ngValue]="undefined" selected>User Description</option>
+    <option value="Client">New Client</option>
+    <option value="Employee" disabled>New Employee</option>
+  </select>
+  <span *ngIf="DescriptionInfo.errors?.required && DescriptionInfo.touched && DescriptionInfo.invalid"></span>
+
+  <br>
+  <button [disabled]="formInfo.form.invalid" (click)="((AddUser()))">Let's Start</button>
+
+<br>
+
+</form>

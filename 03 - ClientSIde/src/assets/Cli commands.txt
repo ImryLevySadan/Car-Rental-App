@@ -1,0 +1,11 @@
+יצירת קומפוננטת העל ושיוכה למודול המתאים
+ng g c components/SearchResult -m modules/app.module --spec false
+
+יצירת מודול ראוטינג כמודל עצמאי בספריית המודולים
+ng g m modules/routing --spec false --flat
+
+יצירת הסרוויס הראשון
+ng g s services/cars --spec false
+
+יצירת קומפוננטת שגיאת 404
+ng g c components/Page404 -m modules/app.module --spec false

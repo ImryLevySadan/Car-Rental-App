@@ -1,0 +1,22 @@
+<form #formInfo="ngForm">
+
+    <input #userNameinfo="ngModel" type="text" name="username" [(ngModel)]="credentials.username" required placeholder="Jef Bazos666">
+    <span *ngIf="userNameinfo.touched && userNameinfo.invalid">Must enter a user name</span>
+    <br>
+
+    <input #passwordInfo="ngModel" type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$" [(ngModel)]="credentials.password" required placeholder="***********">
+    <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Must Enter a password</span>
+    <span *ngIf="passwordInfo.errors?.pattern && passwordInfo.invalid">The password must include at least one number, one lowercase char and one UPPERcase char</span>
+    
+    <br>
+    
+    
+    <button [disabled]="formInfo.form.invalid" (click)="((logIn()))">Let's Start</button>
+    
+    </form>
+<br>
+<br>
+    <h3>
+        New User? Sign Up 
+        <a routerLink="signup">here!</a>
+    </h3>

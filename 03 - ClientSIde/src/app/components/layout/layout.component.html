@@ -1,0 +1,82 @@
+<!-- This is the header and the navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+                <div class="navbar-header">
+        <app-menu id="menu"></app-menu>
+</div>
+</div>       
+      </nav>
+
+<div class="jumbotron text-center">
+    <h1>Car is Your home</h1> 
+    <p>Rental Car Service, for over than 100 years</p> 
+  </div>
+
+      <!-- This is the main content -->
+  <div class="container-fluid text-center" *ngIf="!inHomePage">
+            
+                <router-outlet></router-outlet>                 
+            
+    </div>
+
+    <!-- This is the "home component" -->
+  <div class="container"  *ngIf="inHomePage">
+
+
+  <div class="container-fluid">
+        <div class="row">
+                <div class="col-sm-8">
+
+
+  <h2>About us</h2>
+  <p>We. In Car is Your Home, believe that driving is not just about reaching out from A to B. Driving is about the road, being together with the people that you love. Driving is about go out, but stay home.
+      For over than 100 years we provide car rental services to people around the world. 
+      We invite you to... 
+  </p> 
+  <h2>
+    Drive.
+  </h2>
+   
+</div>
+</div>
+
+<div class="container-fluid text-center bg-grey">
+        <h2>Take a Look at our Fleat</h2>
+        <h4>We love this babies</h4>
+        <br>
+        <br>
+    
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="/assets/Carsimages/1.jpg">
+              <p><strong>BMW</strong></p>
+              <p>our favorite</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="/assets/Carsimages/5.jpg"> 
+              <p><strong>Skoda</strong></p>
+              <p>Perfect. For everyone</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="/assets/Carsimages/3.jpg">
+              <p><strong>Mazda</strong></p>
+              <p>Power in your hands</p>
+            </div>
+          </div>
+      </div>
+    </div>        
+  </div>       
+    
+            <footer class="container-fluid text-center">
+
+                <p>&copy; Car is Your Home website was made by <a href="https://www.linkedin.com/in/imry-levy-sadan-26a79640/" title="Visit My Linkedin page">Imry Levy Sadan</a></p> 
+              </footer>
+        
+    
+
+        </div>

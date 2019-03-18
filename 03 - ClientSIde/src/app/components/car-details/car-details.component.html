@@ -1,0 +1,19 @@
+<a routerLink="/search-result">
+    Back to Search Result
+  </a>
+
+<h2> Car Details</h2>
+<div *ngIf="car">
+    <img src="/assets/Carsimages/{{car.id}}.jpg" width="50px" height="50px">
+        <div id="carDetails">
+            <h4>mileage: {{car.mileage}}</h4>
+            <h4>manufacture: {{car.manufacture}}</h4>
+            <h4>model: {{car.model}}</h4>
+            <h4>dailycost: {{car.dailycost}}$</h4>
+            <h4>year: {{car.year}}</h4>
+            <h4>transmission: {{car.transmission}}</h4>
+            <h4>Address: {{car.address}} </h4>
+        </div>
+</div>
+
+<button type="button" (click)="RentCar()">Rent this Car!</button>

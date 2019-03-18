@@ -24,6 +24,7 @@ export class CarDetailsComponent implements OnInit, OnDestroy {
   public ngOnInit()  {
 
     let carid = +this.activatedroute.snapshot.params.id;
+    console.log(carid);
     if (isNaN(carid))
       {carid = 0;}
     this.unsubscribe = this.redux.subscribe(() => { //Listening to change in store 

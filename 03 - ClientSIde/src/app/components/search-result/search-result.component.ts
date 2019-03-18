@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, DoCheck } from '@angular/core';
 import { Unsubscribe } from 'redux';
 import { NgRedux } from 'ng2-redux';
 import { Store } from 'src/app/redux/store';
@@ -10,7 +10,7 @@ import { Search } from 'src/app/models/search';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit, OnDestroy {
-  
+ 
 
   public unsubscribe: Unsubscribe;
   public searchedCars: Search []; 
@@ -24,6 +24,7 @@ export class SearchResultComponent implements OnInit, OnDestroy {
         });
     
   }
-
+    
+  
   ngOnDestroy(): void {this.unsubscribe(); }
 }

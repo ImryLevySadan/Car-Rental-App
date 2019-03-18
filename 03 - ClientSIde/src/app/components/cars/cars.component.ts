@@ -24,6 +24,7 @@ export class CarsComponent implements OnInit, DoCheck, OnDestroy {
   public ngOnInit(): void {
     this.unsubscribe = this.redux.subscribe(() => { //Listening to change in store 
       this.cars = this.redux.getState().cars;
+      console.log(this.cars);
   
     });
       this.carsService.getAllCars();  }

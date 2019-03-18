@@ -1,45 +1,50 @@
 <a routerLink="/cars" class="cars">
   Back to Cars List
 </a>
-<a routerLink="/car-details" class="car-detail">
-  Back to Cars List
+<a routerLink="/car-details/{{CarForRent.id}}" class="car-detail">
+  Back to Car details
 </a>
 <a routerLink="/search-result" class="search">
   Back to search result
 </a>
-<br>
-<br>
-<br>
 
-<label>Pickup date: 
-  <input type="date" *ngIf="CarForRent" [(ngModel)]="carDates.start">
+<br>
+<br>
+<br>
+<div class="w3-container" *ngIf="CarForRent">
+<div class="w3-row w3-section">
+    <div class="w3-rest">
+<label>Start Rentel Date
+    <input type="date" *ngIf="CarForRent" [(ngModel)]="carDates.start">
 </label>
+</div>
+</div>
 
-<label>Return date: 
-  <input type="date" *ngIf="CarForRent" [(ngModel)]="carDates.returndate">
-</label>
+<div class="w3-row w3-section">
+<div class="w3-rest">
+<label>return Rentel Date
+    <input type="date" *ngIf="CarForRent" [(ngModel)]="carDates.returndate">
+
+  </label>
+
+</div>
+</div>
 <br>
 <button type="button" (click)="calculateRentalTotalCost()">Calculate Car Rental costs</button>
+</div>
 
 <h3 *ngIf="carRentalCost">Car total cost: {{carRentalCost}}</h3>
 <h3 *ngIf="CarRentalDelayCost">Car one day Delay Cost: {{CarRentalDelayCost }}</h3>
 
 <br>
 
-<button type="button" (click)="RentCar()">Book this Car!</button>
+<button type="button" id="btnBook" (click)="RentCar()">Book this Car!</button>
 
+<div class="card" *ngIf="CarForRent">
+    <img src="/assets/Carsimages/{{CarForRent.id}}.jpg" width="100%">
+    <br>
+    <h1>{{CarForRent.manufacture}} {{CarForRent.model}} {{CarForRent.year}}</h1>
+    <p class="price">Daily Cost: {{CarForRent.dailycost}}$</p>
+    <p>Pick Up Location: {{CarForRent.address}}</p>
+  </div>
 
-
-<h2> Car Details</h2>
-<div *ngIf="CarForRent">
-  <img src="/assets/Carsimages/{{CarForRent.id}}.jpg" width="50px" height="50px">
-      <div id="carDetails">
-          <h4>mileage: {{CarForRent.mileage}}</h4>
-          <h4>manufacture: {{CarForRent.manufacture}}</h4>
-          <h4>model: {{CarForRent.model}}</h4>
-          <h4>dailycost: {{CarForRent.dailycost}}$</h4>
-          <h4>year: {{CarForRent.year}}</h4>
-          <h4>transmission: {{CarForRent.transmission}}</h4>
-          <h4>Address: {{CarForRent.address}} </h4>
-      </div>
-</div>

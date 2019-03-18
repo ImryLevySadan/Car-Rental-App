@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgRedux } from 'ng2-redux';
 import { UsersService } from 'src/app/services/users.service';
-import { Store } from 'src/app/redux/store';
-import { Unsubscribe } from 'redux';
 import { Users } from 'src/app/models/users';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',

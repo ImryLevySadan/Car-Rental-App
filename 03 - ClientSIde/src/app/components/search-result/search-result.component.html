@@ -1,12 +1,15 @@
-<div>
+<div class="w3-container w3-center" *ngIf="searchedCars">
  
-  <ul *ngFor="let car of searchedCars" class="w3-ul w3-card-4 w3-hoverable w3-center">
+  <ul *ngFor="let car of searchedCars" >
          
-      <li class="w3-bar">
-          <img class="w3-bar-item w3-circle w3-hide-small" id="tumbImage" src="/assets/Carsimages/{{car.typeid}}.jpg" width="100%" routerLink="/car-details/{{car.id}}">
-            <h3 class="w3-bar-item">
+      <li>
+          <div class="card">
+          <img id="tumbImage" src="/assets/Carsimages/{{car.typeid}}.jpg" width="100%" routerLink="/car-details/{{car.carid}}">
+          <div class="container">
+            <h3>
             {{car.manufacture}} {{car.model}} {{car.year}}</h3>
-          
+        </div>
+    </div>
         </li>
 
     </ul>

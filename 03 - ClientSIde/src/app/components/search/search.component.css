@@ -2,10 +2,14 @@ label, input, select, option ,button {
     width: 400px;
     font-size: large;
     margin: 2px;
+
+}
+input, select, option {
+    color: orange;
 }
 
 label {
-    color: black;
+    color: rgb(21, 132, 235);
     font-weight: bold;
 
 }
@@ -34,5 +38,3 @@ button {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-  

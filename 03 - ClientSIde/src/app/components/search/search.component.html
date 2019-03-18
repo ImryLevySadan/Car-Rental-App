@@ -1,64 +1,74 @@
 <a *ngIf="carForRent" routerLink="/rental">Back to Rental Page</a>
-<div class="container-fluid text-center">
-                <h2>Find yourself a nice car</h2>
-                <br>
-                <br>
 
 
-<form #formInfo="ngForm" *ngIf="!formButtonPressed">
-    <label>Start Rentel Date
+<form #formInfo="ngForm" *ngIf="!formButtonPressed" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+        <h2 class="w3-center">Find yourself a car</h2>
+                 <div class="w3-row w3-section">
+                    <div class="w3-rest">
+           <label>Start Rentel Date
         <input #startDateInfo="ngModel" type="date" value="2019-01-01" name="startdate" [(ngModel)]="searchedcar.start" required >
     </label>
-<Br>
+</div>
+</div>
+
+<div class="w3-row w3-section">
+                <div class="w3-rest">
     <label>return Rentel Date
             <input #returnDateInfo="ngModel" type="date" value="2019-01-01" name="returndate" [(ngModel)]="searchedcar.returndate" required >
         </label>
   
-        <br>
+</div>
+</div>
 
+<div class="w3-row w3-section">
+                <div class="w3-rest">
 <label>Choose Manufacture
         <select #ManufactureInfo="ngModel" [(ngModel)]="searchedcar.manufacture" name="manufacture" (change)="onChange($event.target.value)">
                 <option [ngValue]="undefined" selected>Choose Manufacture</option>
                 <option *ngFor="let manufacture of manufactureres">{{manufacture.manufacture}}</option>
-            
               </select>
-
             </label>
-            <br>
+        </div>
+</div>
+
+<div class="w3-row w3-section">
+                <div class="w3-rest">
             <label>Choose Model
               <select #ModelInfo="ngModel" [(ngModel)]="searchedcar.model" name="model">
                       <option [ngValue]="undefined" selected>Choose your model</option>
                       <option *ngFor="let type of Selectedtype">{{type.model}}</option>
-                  
-                    </select>
-      
+              </select>
                   </label>
-  <br>
+                </div>
+        </div>
+
+        <div class="w3-row w3-section">
+                        <div class="w3-rest">
             <label>Choose Year
                     <select #YearInfo="ngModel" [(ngModel)]="searchedcar.year" name="year">
                             <option [ngValue]="undefined" selected>Choose year</option>
                             <option *ngFor="let type of Selectedtype">{{type.year}}</option>
-                        
                           </select>
-            
                         </label>
-        <br>
+                </div>
+                </div>
 
     
+                <div class="w3-row w3-section">
+                                <div class="w3-rest">
     <label>Choose Transmission 
             <select #TransmissioInfo="ngModel" [(ngModel)]="searchedcar.transmission" name="transmission">
                     <option [ngValue]="undefined" selected>Choose transmission</option>
                     <option *ngFor="let type of Selectedtype">{{type.transmission}}</option>
                 
                   </select>
-    
+
                 </label>
-<br>
+        </div>
+</div>
         
-        <button type="button" (click)="findSearchedCars()">
+        <button type="button" class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding" (click)="findSearchedCars()">
             Let's Get you a nice Car
         </button>
 
         </form>
-
-</div>

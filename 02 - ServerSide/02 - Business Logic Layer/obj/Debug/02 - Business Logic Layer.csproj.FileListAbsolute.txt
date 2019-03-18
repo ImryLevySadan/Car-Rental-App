@@ -1,0 +1,15 @@
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\02 - Business Logic Layer.dll.config
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\02 - Business Logic Layer.dll
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\02 - Business Logic Layer.pdb
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\ClassLibrary1.dll
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\EntityFramework.dll
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\ClassLibrary1.pdb
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\ClassLibrary1.dll.config
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\EntityFramework.xml
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\obj\Debug\02 - Business Logic Layer.csprojAssemblyReference.cache
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\obj\Debug\02 - Business Logic Layer.csproj.CoreCompileInputs.cache
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\obj\Debug\02 - Business Logic Layer.csproj.CopyComplete
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\obj\Debug\02 - Business Logic Layer.dll
+C:\Car Rental Project\02 - ServerSide\02 - Business Logic Layer\obj\Debug\02 - Business Logic Layer.pdb

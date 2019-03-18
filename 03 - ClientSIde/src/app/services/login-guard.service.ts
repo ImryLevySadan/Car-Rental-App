@@ -14,7 +14,7 @@ export class LoginGuardService implements CanActivate {
   public canActivate() : boolean {
     if (this.redux.getState().IsLoogedIn)
         return true;
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/home"]);
     return false;
 
   }

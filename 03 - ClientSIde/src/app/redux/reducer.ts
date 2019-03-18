@@ -30,8 +30,9 @@ export class Reducer {
                     newStore.IsLoogedIn = true;
                     newStore.currentUser = action.payload;
                     break;
-            case ActionsType.Logout:
+            case ActionsType.Logout:                    
                     newStore.IsLoogedIn = false;
+                    newStore.currentUser = {description: "Client"};
                     break;
              case ActionsType.AddUser:
                     newStore.users.push(action.payload);

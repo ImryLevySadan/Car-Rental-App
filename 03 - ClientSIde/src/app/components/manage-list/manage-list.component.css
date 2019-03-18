@@ -1,0 +1,31 @@
+input, button {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+
+
+}
+
+span {
+    color: red;
+    margin: 10px;
+    position: absolute;
+    font-size: large;
+    font-family: cursive;
+}
+
+select {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+    color: black;
+}
+
+option[value="undefined"][disabled] {
+    display: none;
+    }
+
+option {
+    color: black;
+}
+

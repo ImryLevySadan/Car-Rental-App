@@ -7,7 +7,6 @@ import { Action } from '../redux/action';
 import { ActionsType } from '../redux/action-type';
 import { Store } from '../redux/store';
 import { Users } from '../models/users';
-import { isNull } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root'
@@ -24,13 +23,17 @@ export class LoginService {
           const verificationAction: Action = {type: ActionsType.Login, payload: user};
           this.redux.dispatch(verificationAction);
           }
-          else {
-          const verificationAction: Action = {type: ActionsType.Logout};
-          this.redux.dispatch(verificationAction);
-        }
+        //   else {
+        //   const verificationAction: Action = {type: ActionsType.Logout};
+        //   this.redux.dispatch(verificationAction);
+        // }
         
-       });
-      
+       });    
     
+  }
+
+  public LogOut () :void {
+    const action: Action = {type: ActionsType.Logout};
+      this.redux.dispatch(action); 
   }
 }

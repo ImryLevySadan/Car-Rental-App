@@ -1,19 +1,30 @@
-table{
-    margin: auto;
-}
 
-table, th, td {
-    border: 1px solid black;
-    font-family: cursive;
-    color: black;
-    font-size: large;
-}
 div {
     height: 400px;
     overflow: auto;
 }
-img {
-    position: absolute;
-    left: 20px;
-    top: 120px;
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
 }
+ul, li {
+
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    
+}
+a {
+    font-size: xx-large;
+ }
+
+ul li:last-child {
+    border-bottom: none
+  }
+
+  #tumbImage {
+      float: left;
+      width: auto;
+      height: auto;
+  }

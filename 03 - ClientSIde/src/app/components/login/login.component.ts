@@ -6,8 +6,7 @@ import { Users } from 'src/app/models/users';
 import { NgRedux } from 'ng2-redux';
 import { Store } from 'src/app/redux/store';
 import { Unsubscribe } from 'redux';
-import { IfStmt } from '@angular/compiler';
-import { isNull } from '@angular/compiler/src/output/output_ast';
+
 
 @Component({
   selector: 'app-login',
@@ -15,7 +14,7 @@ import { isNull } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./login.component.css']
 })
 
-export class LoginComponent implements OnDestroy {
+export class LoginComponent {
   
   public credentials = new Credentials ();
   public user: Users = {};
@@ -24,38 +23,38 @@ export class LoginComponent implements OnDestroy {
  
   constructor(private loginservice: LoginService, private router: Router, private redux:NgRedux<Store>) {}
 
-  public logIn (): void {
-    this.unsubscribe = this.redux.subscribe(() => {
-      if(this.redux.getState().IsLoogedIn){
-       this.user = this.redux.getState().currentUser;
-       console.log(this.user);
-       switch (this.user.description) {
-         case "Manager":  
-         this.router.navigate(["manager"]);
-         break;
-         case "Employee":  
-         this.router.navigate(["returning-car"]);
-         break;
-         case "Client":  
-         this.router.navigate(["search"]);
-         break;
-       }
-      }
-      else {
-        alert ("User Name or Password doesn't exist");
-        this.credentials = { username: "", password: ""}
-        console.log(this.credentials);
-        this.router.navigate(["login"]);
+  // public logIn (): void {
+  //   this.unsubscribe = this.redux.subscribe(() => {
+  //     if(this.redux.getState().IsLoogedIn){
+  //      this.user = this.redux.getState().currentUser;
+  //      console.log(this.user);
+  //      switch (this.user.description) {
+  //        case "Manager":  
+  //        this.router.navigate(["manager"]);
+  //        break;
+  //        case "Employee":  
+  //        this.router.navigate(["returning-car"]);
+  //        break;
+  //        case "Client":  
+  //        this.router.navigate(["search"]);
+  //        break;
+  //      }
+  //     }
+  //     else {
+  //       alert ("User Name or Password doesn't exist");
+  //       this.credentials = { username: "", password: ""}
+  //       console.log(this.credentials);
+  //       this.router.navigate(["login"]);
 
 
-      }
-    });
-    this.loginservice.IsExist(this.credentials);
+  //     }
+  //   });
+  //   this.loginservice.IsExist(this.credentials);
     
-  }
-  public ngOnDestroy(): void {
-    this.unsubscribe();
-  }
+  // }
+  // public ngOnDestroy(): void {
+  //   this.unsubscribe();
+  // }
 
 }
 

@@ -25,22 +25,32 @@
           Managment Section 
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="Users">Manage Users</a>
-          <a class="dropdown-item" routerLink="Cars List">Manage Cars List</a>
-          <a class="dropdown-item" routerLink="Cars Types">Manage Cars Types</a>
-          <a class="dropdown-item" routerLink="Rentel Cars">Manage Rentel Cars</a>
+          <a class="dropdown-item" routerLink="manage-users">Manage Users</a>
+          <a class="dropdown-item" routerLink="manage-list">Manage Cars List</a>
+          <a class="dropdown-item" routerLink="manage-types">Manage Cars Types</a>
+          <a class="dropdown-item" routerLink="manage-rental">Manage Rentel Cars</a>
         </div>
-      </li>
-      <li class="nav-item">
-     
-        <a class="nav-link" *ngIf="isLoggedIn" href="#" (click)="logOut()">Log out</a>
+      </li>    
+         </ul>
 
-            <a class="nav-link" *ngIf="!isLoggedIn" routerLink="login">
-                Login/SignUp
-                 </a>
-      </li>
-    </ul>
-  
+         <div class="login-container" *ngIf="!isLoggedIn">
+            <form>
+              <input #userNameinfo="ngModel" type="text" name="username" [(ngModel)]="credentials.username" required placeholder="User Name">         
+              <input #passwordInfo="ngModel" type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$" [(ngModel)]="credentials.password" required placeholder="Password">
+              <button id="LoginButton" type="submit" (click)="((logIn()))">Log In</button>
+            </form>
+          </div>
+          <div class="login-container" *ngIf="!isLoggedIn">
+             <button class="navbar-brand" id="SignupButton" routerLink="signup">Sign Up</button>
+        </div>
+
+        <div class="login-container" *ngIf="isLoggedIn">
+         <p id="username"> {{user.username}} </p>
+                 </div>
+       <div class="login-container" *ngIf="isLoggedIn">
+          <button class="navbar-brand" id="LogOutButton" (click)="logOut()">Log Out</button>
+     </div>
+            
   </nav>
 
  

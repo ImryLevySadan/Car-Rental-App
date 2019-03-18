@@ -8,7 +8,18 @@
     letter-spacing: 4px;
     border-radius: 0;
   }
-
+ 
+  .navbar  > .login-container > #username {
+    margin-bottom: 0;
+    background-color: #53a1fa;
+    z-index: 9999;
+    border: 0;
+    font-size: 20px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+  }
+  
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: black !important;
     background-color: #fff !important;
@@ -20,12 +31,105 @@ a {
 
 }
 
-.nav-link > #hello {
-    position: absolute;
-    right: 100px; 
-    color: white; 
+.navbar .login-container {
+  float: right;
 }
-#nav-link > #logout {
-    position: absolute;
-    right: 75px;  
+
+/* Style the input field inside the navbar */
+.navbar input[type=text] {
+  padding: 4px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: solid gray 1px;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+/* Style the input field inside the navbar */
+.navbar input[type=password] {
+  padding: 4px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: solid gray 1px;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+.navbar .login-container button {
+  float: right;
+  padding: 4px;
+  margin-top: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .login-container #LoginButton:hover {
+  background: rgb(93, 241, 7);
+}
+.navbar .login-container #SignupButton:hover {
+  background: rgb(93, 241, 7);
+}
+.navbar .login-container #LogOutButton:hover {
+  background: rgb(93, 241, 7);
+}
+
+#LoginButton {
+  background-color: rgb(240, 162, 16); /* Green */
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#SignupButton {
+  background-color: rgb(240, 162, 16); /* Green */
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#LogOutButton {
+  background-color: rgb(240, 162, 16); /* Green */
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .login-container {
+    float: none;
+  }
+  .navbar a, .topnav input[type=text], .navbar .login-container #LoginButton {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=text] {
+    border: 1px solid #ccc; 
+  }
+  .navbar a, .topnav input[type=password], .navbar .login-container #LoginButton {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=password] {
+    border: 1px solid #ccc; 
+  }
 }

@@ -6,13 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit, DoCheck {
+export class LayoutComponent implements DoCheck {
 
   constructor( private router: Router) { }
   public inHomePage :boolean = true;
   
-  ngOnInit() {
-  }
+  
   public ngDoCheck(): void {
    let url = "http://localhost:4200" + this.router.url;
    console.log(url);

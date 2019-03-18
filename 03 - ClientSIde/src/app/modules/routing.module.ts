@@ -15,13 +15,21 @@ import { RentalComponent } from '../components/rental/rental.component';
 import { ReturningCarComponent } from '../components/returning-car/returning-car.component';
 import { LayoutComponent } from '../components/layout/layout.component';
 import { ManagerComponent } from '../components/manager/manager.component';
+import { ManageUsersComponent } from '../components/manage-users/manage-users.component';
+import { ManageTypesComponent } from '../components/manage-types/manage-types.component';
+import { ManageListComponent } from '../components/manage-list/manage-list.component';
+import { ManageRentalComponent } from '../components/manage-rental/manage-rental.component';
 
 
 const routes: Routes = [
-  {path: "login/signup", component: SignupComponent},
+  {path: "signup", component: SignupComponent},
   {path: "home", component: LayoutComponent},
   {path: "search", component: SearchComponent},
   {path: "manager", component: ManagerComponent},
+  {path: "manage-users", component: ManageUsersComponent},
+  {path: "manage-types", component: ManageTypesComponent},
+  {path: "manage-list", component: ManageListComponent},
+  {path: "manage-rental", component: ManageRentalComponent},
   {path: "returning-car", canActivate: [LoginGuardService], component: ReturningCarComponent},
   {path: "search-result", component: SearchResultComponent},
   {path: "cars", component: CarsComponent},

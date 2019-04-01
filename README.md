@@ -1,5 +1,4 @@
 # Car-Rental-App
-Car-Rental-App
 
 
 This is my graduate project at John Bryce College. 

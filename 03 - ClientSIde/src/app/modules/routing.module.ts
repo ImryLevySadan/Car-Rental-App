@@ -19,10 +19,12 @@ import { ManageUsersComponent } from '../components/manage-users/manage-users.co
 import { ManageTypesComponent } from '../components/manage-types/manage-types.component';
 import { ManageListComponent } from '../components/manage-list/manage-list.component';
 import { ManageRentalComponent } from '../components/manage-rental/manage-rental.component';
+import { UpdateCarComponent } from '../components/update-car/update-car.component';
 
 
 const routes: Routes = [
   {path: "signup", component: SignupComponent},
+  {path: "update-car", canActivate: [LoginGuardService], component: UpdateCarComponent},
   {path: "home", component: LayoutComponent},
   {path: "search", component: SearchComponent},
   {path: "manager", component: ManagerComponent},

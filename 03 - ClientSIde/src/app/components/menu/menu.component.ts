@@ -28,6 +28,7 @@ export class MenuComponent implements DoCheck, OnDestroy  {
         if(this.redux.getState().IsLoogedIn){
          this.user = this.redux.getState().currentUser;
          console.log(this.user);
+       
         }
      
       });
@@ -41,6 +42,7 @@ export class MenuComponent implements DoCheck, OnDestroy  {
       this.unsubscribe = this.redux.subscribe(() => {  
         this.credentials = { username: "", password: ""} 
         this.isLoggedIn = false;
+        this.router.navigate(["/home"]);
         });
      this.loginservice.LogOut();
    

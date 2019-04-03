@@ -1,19 +1,22 @@
-<a routerLink="/home" class="back">
-  Back Home
+<a routerLink="/cars" class="back">
+  Back to car List
 </a>
 
 <form #formInfo="ngForm">
-
-<input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required placeholder="Car's type">
+<label>Type ID:
+<input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required>
 <span *ngIf="carTypeinfo.errors?.required && carTypeinfo.touched">Type is a must</span>
 <span *ngIf="carTypeinfo.errors?.pattern && carTypeinfo.invalid">Type has to be greater than 0</span>
+</label>
 
 <br>
-<input #carBranchInfo="ngModel" type="number" name="BranchID" pattern="^[1-9][0-9]*$" [(ngModel)]="car.branchid" required placeholder="Car's Branch">
+<label>Branch ID:
+<input #carBranchInfo="ngModel" type="number" name="BranchID" pattern="^[1-9][0-9]*$" [(ngModel)]="car.branchid" required >
 <span *ngIf="carBranchInfo.touched && carBranchInfo.invalid">Branch is a must</span>
 <span *ngIf="carBranchInfo.errors?.pattern && carBranchInfo.invalid">Type has to be greater than 0</span>
+</label>
 <br>
-<input #CarLicenseplateInfo="ngModel" pattern=^[0-9]*$ minlength="7" maxlength="7" type="text" name="LicensePlate" [(ngModel)]="car.license_plate" required placeholder="5857473">
+<input #CarLicenseplateInfo="ngModel" pattern=^[0-9]*$ minlength="7" maxlength="7" type="text" name="LicensePlate" [(ngModel)]="car.license_plate" required >
 <span *ngIf="CarLicenseplateInfo.errors?.required && CarLicenseplateInfo.touched">License plate is a must</span>
 <span *ngIf="CarLicenseplateInfo.errors?.minlength ||  CarLicenseplateInfo.errors?.maxlength && CarLicenseplateInfo.touched">License plate must be 7 chars</span>
 <span *ngIf="CarLicenseplateInfo.errors?.pattern && CarLicenseplateInfo.touched">License plate must be number</span>
@@ -37,6 +40,6 @@
   <span *ngIf="carAvailableInfo.errors?.required && carAvailableInfo.touched && carAvailableInfo.invalid">Availabilty is a must</span>
 <br>
 
-<button [disabled]="formInfo.form.invalid" (click)="((addCar()))">Add Car</button>
+<button [disabled]="formInfo.form.invalid" (click)="((UpdateCar()))">UpdateCar</button>
 
 </form>

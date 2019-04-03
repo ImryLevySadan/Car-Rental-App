@@ -1,3 +1,46 @@
-<p>
-  manage-types works!
-</p>
+<div class="scrollmenu">
+  <a routerLink="/add-car">Add a Car</a>
+  <a routerLink="/cars">Show all Cars</a>
+  <a href="#">Update Car details</a>
+
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+</div>
+
+  <input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required placeholder="Car's type">
+  <span *ngIf="carTypeinfo.errors?.required && carTypeinfo.touched">Type is a must</span>
+  <span *ngIf="carTypeinfo.errors?.pattern && carTypeinfo.invalid">Type has to be greater than 0</span>
+  
+  <br>
+  <input #carBranchInfo="ngModel" type="number" name="BranchID" pattern="^[1-9][0-9]*$" [(ngModel)]="car.branchid" required placeholder="Car's Branch">
+  <span *ngIf="carBranchInfo.touched && carBranchInfo.invalid">Branch is a must</span>
+  <span *ngIf="carBranchInfo.errors?.pattern && carBranchInfo.invalid">Type has to be greater than 0</span>
+  <br>
+  <input #CarLicenseplateInfo="ngModel" pattern=^[0-9]*$ minlength="7" maxlength="7" type="text" name="LicensePlate" [(ngModel)]="car.license_plate" required placeholder="5857473">
+  <span *ngIf="CarLicenseplateInfo.errors?.required && CarLicenseplateInfo.touched">License plate is a must</span>
+  <span *ngIf="CarLicenseplateInfo.errors?.minlength ||  CarLicenseplateInfo.errors?.maxlength && CarLicenseplateInfo.touched">License plate must be 7 chars</span>
+  <span *ngIf="CarLicenseplateInfo.errors?.pattern && CarLicenseplateInfo.touched">License plate must be number</span>
+  
+  <br>
+  <input #carMileageInfo="ngModel" type="number" name="mileage" pattern="^[0-9]*$" [(ngModel)]="car.mileage" required placeholder="666.66">
+  <span *ngIf="carMileageInfo.touched && carMileageInfo.invalid">Mileage is a must</span>
+  <br>
+  <select #CarStatusInfo="ngModel" [(ngModel)]="car.status" required name="status">
+    <option [ngValue]="undefined" selected >Select Status</option>
+    <option type="text" value="Ready" name="status">Ready</option>
+    <option type="text" value="In repair" name="available">In repair</option>
+  </select>
+  <span *ngIf="CarStatusInfo.errors?.required && CarStatusInfo.touched && CarStatusInfo.invalid">Status is a must</span>
+  <br>
+  <select #carAvailableInfo="ngModel" [(ngModel)]="car.available" required name="available">
+      <option [ngValue]="undefined" selected>Select Availabilty</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <span *ngIf="carAvailableInfo.errors?.required && carAvailableInfo.touched && carAvailableInfo.invalid">Availabilty is a must</span>
+  <br>
+  
+  <button [disabled]="formInfo.form.invalid" (click)="((addCar()))">Add Car</button>
+  

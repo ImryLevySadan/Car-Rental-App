@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cars } from '../models/cars';
 import { NgRedux } from 'ng2-redux';
@@ -38,6 +38,13 @@ export class CarsService {
     this.redux.dispatch(action);
   });
   }
+  public updateCar(car: Cars): void {
+    let observable =  this.httpclient.put<Cars>("http://localhost:64635/api/cars/" + car.id, car);
+    observable.subscribe(car => {
+      const action: Action = {type: ActionsType.UpdateCar, payload: car};
+      this.redux.dispatch(action);
+    });
+    }
 
   public calculateRentalTotalCost (carDate: Search) : Observable<number[]> {
     return (this.httpclient.post<number[]>("http://localhost:64635/api/cars/cost", carDate));
@@ -54,8 +61,14 @@ export class CarsService {
   public AddRentedCar (rentedCar: RentedCars): Observable<RentedCars> {
     return this.httpclient.post<RentedCars>("http://localhost:64635/api/RentedCars" , rentedCar);    
         }
-        public updateRentedCar (rentedCar: RentedCars): Observable<RentedCars> {
+
+        public DeleteCar (id: number): Observable<{}>  {
+          return this.httpclient.delete("http://localhost:64635/api/cars/" + id);    
+
+  }        public updateRentedCar (rentedCar: RentedCars): Observable<RentedCars> {
           console.log(rentedCar);
           return this.httpclient.put<RentedCars>("http://localhost:64635/api/ReturnedRentedCar/" + rentedCar.id, rentedCar );    
               }
+
+          
 }

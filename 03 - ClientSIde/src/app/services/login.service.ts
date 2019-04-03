@@ -23,10 +23,7 @@ export class LoginService {
           const verificationAction: Action = {type: ActionsType.Login, payload: user};
           this.redux.dispatch(verificationAction);
           }
-        //   else {
-        //   const verificationAction: Action = {type: ActionsType.Logout};
-        //   this.redux.dispatch(verificationAction);
-        // }
+      
         
        });    
     

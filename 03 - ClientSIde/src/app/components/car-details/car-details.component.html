@@ -16,5 +16,10 @@
     <h1>{{car.manufacture}} {{car.model}} {{car.year}}</h1>
     <p class="price">Daily Cost: {{car.dailycost}}$</p>
     <p>Pick Up Location: {{car.address}}</p>
-    <p><button type="button" (click)="RentCar()">Rent This car</button></p>
+    <p><button *ngIf="!userDescription == 'Manager'" type="button" (click)="RentCar()">Rent This car</button></p>
+    <p><button *ngIf="userDescription == 'Manager'" type="button" (click)="DeleteCar()">Delete Car</button></p>
+    <p><button *ngIf="userDescription == 'Manager'" type="button" (click)="UpdateCar()">Update Car</button></p>
+
+
   </div>
+

@@ -26,10 +26,12 @@ import { ManageUsersComponent } from '../components/manage-users/manage-users.co
 import { ManageTypesComponent } from '../components/manage-types/manage-types.component';
 import { ManageListComponent } from '../components/manage-list/manage-list.component';
 import { ManageRentalComponent } from '../components/manage-rental/manage-rental.component';
+import { DeleteCarComponent } from '../components/delete-car/delete-car.component';
+import { UpdateCarComponent } from '../components/update-car/update-car.component';
 
 
 @NgModule({
-  declarations: [ LayoutComponent, MenuComponent, CarsComponent, LoginComponent, ContactComponent, Page404Component, SearchComponent, ThumbnailComponent, CarDetailsComponent, AddCarComponent, SignupComponent, SearchResultComponent, RentalComponent, ReturningCarComponent, ManagerComponent, ManageUsersComponent, ManageTypesComponent, ManageListComponent, ManageRentalComponent],
+  declarations: [ LayoutComponent, MenuComponent, CarsComponent, LoginComponent, ContactComponent, Page404Component, SearchComponent, ThumbnailComponent, CarDetailsComponent, AddCarComponent, SignupComponent, SearchResultComponent, RentalComponent, ReturningCarComponent, ManagerComponent, ManageUsersComponent, ManageTypesComponent, ManageListComponent, ManageRentalComponent, DeleteCarComponent, UpdateCarComponent],
   imports: [
     BrowserModule,
     RouterModule, 

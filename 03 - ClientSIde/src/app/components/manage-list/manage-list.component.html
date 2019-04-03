@@ -1,17 +1,14 @@
   <div class="scrollmenu">
     <a routerLink="/add-car">Add a Car</a>
+    <a routerLink="/add-car">Delete Car</a>
+    <a routerLink="/add-car">Update Car</a>
     <a routerLink="/cars">Show all Cars</a>
-    <a href="#">Update Car details</a>
-  
+ 
   
   <div class="main">
     <router-outlet></router-outlet>
   </div>
 </div>
-<!-- <button type="button" (click)="ShowAddCarForm()" *ngIf="!addcar">Add Car</button> -->
-
-
-<!-- <form #formInfo="ngForm" *ngIf="addcar">
 
     <input #carTypeinfo="ngModel" type="number" name="typeid" pattern="^[1-9][0-9]*$" [(ngModel)]="car.typeid" required placeholder="Car's type">
     <span *ngIf="carTypeinfo.errors?.required && carTypeinfo.touched">Type is a must</span>
@@ -48,4 +45,3 @@
     
     <button [disabled]="formInfo.form.invalid" (click)="((addCar()))">Add Car</button>
     
-    </form> -->

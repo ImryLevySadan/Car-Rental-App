@@ -23,38 +23,6 @@ export class LoginComponent {
  
   constructor(private loginservice: LoginService, private router: Router, private redux:NgRedux<Store>) {}
 
-  // public logIn (): void {
-  //   this.unsubscribe = this.redux.subscribe(() => {
-  //     if(this.redux.getState().IsLoogedIn){
-  //      this.user = this.redux.getState().currentUser;
-  //      console.log(this.user);
-  //      switch (this.user.description) {
-  //        case "Manager":  
-  //        this.router.navigate(["manager"]);
-  //        break;
-  //        case "Employee":  
-  //        this.router.navigate(["returning-car"]);
-  //        break;
-  //        case "Client":  
-  //        this.router.navigate(["search"]);
-  //        break;
-  //      }
-  //     }
-  //     else {
-  //       alert ("User Name or Password doesn't exist");
-  //       this.credentials = { username: "", password: ""}
-  //       console.log(this.credentials);
-  //       this.router.navigate(["login"]);
-
-
-  //     }
-  //   });
-  //   this.loginservice.IsExist(this.credentials);
-    
-  // }
-  // public ngOnDestroy(): void {
-  //   this.unsubscribe();
-  // }
-
+  
 }
 

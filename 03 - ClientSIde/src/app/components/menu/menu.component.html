@@ -19,18 +19,7 @@
             <a class="nav-link" routerLink="contact">Contact Us</a>
           </li>
   
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" *ngIf="description && description == 'Manager'">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Managment Section 
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="manage-users">Manage Users</a>
-          <a class="dropdown-item" routerLink="manage-list">Manage Cars List</a>
-          <a class="dropdown-item" routerLink="manage-types">Manage Cars Types</a>
-          <a class="dropdown-item" routerLink="manage-rental">Manage Rentel Cars</a>
-        </div>
-      </li>    
+     
          </ul>
 
          <div class="login-container" *ngIf="!isLoggedIn">

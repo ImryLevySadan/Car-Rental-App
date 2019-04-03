@@ -55,6 +55,9 @@ export class Reducer {
                 case ActionsType.GetCarTypesByManufacture:
                       newStore.CarTypes = action.payload;
                       break;
+                 case ActionsType.DeleteCar:
+                      newStore.cars = action.payload;
+                      break;
 
 
 
